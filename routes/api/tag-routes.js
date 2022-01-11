@@ -44,9 +44,9 @@ router.post('/', (req, res) => {
     Tag.create(req.body)
     .then(tagData => {
       res.status(200).json(tagData)
-      .catch(err => {
-        res.status(500).json(err);
-      })
+    })
+    .catch(err => {
+      res.status(500).json(err);
     })
 });
 

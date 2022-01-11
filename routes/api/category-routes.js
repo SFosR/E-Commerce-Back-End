@@ -76,7 +76,7 @@ router.delete('/:id', (req, res) => {
         if(!categoryData) {
             res.status(404).json({message:'No category found'})
             return;
-        } rmSync.json(categoryData);
+        } res.json(categoryData);
     }) .catch(err => {
         res.status(500).json(err)
     })
